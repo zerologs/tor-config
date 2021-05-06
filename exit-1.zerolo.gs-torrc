@@ -185,8 +185,9 @@ ExitPolicy reject 127.0.0.0/8:*
 ExitPolicy reject 192.168.0.0/16:*
 ExitPolicy reject 169.254.0.0/15:*
 ExitPolicy reject 172.16.0.0/12:*
-ExitPolicy reject 62.141.55.117:*
-ExitPolicy reject 62.141.54.117:*
+## Server IP
+ExitPolicy reject 217.182.76.127:*
+## Ports
 ExitPolicy reject *:25
 ExitPolicy accept *:*
 
