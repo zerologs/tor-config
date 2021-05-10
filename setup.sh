@@ -43,14 +43,14 @@ wget https://raw.githubusercontent.com/zerologs/tor-config/main/nginx.conf -O /e
 wget https://raw.githubusercontent.com/zerologs/tor-config/main/default -O /etc/nginx/conf.d/default
 wget https://raw.githubusercontent.com/zerologs/tor-config/main/index-stats.html -O /var/www/html/index.html
 
-cat << EOF > /etc/cron.hourly/generate_stats.sh
+cat << EOF > /etc/cron.hourly/generate_stats
 #!/bin/bash          
 vnstati -s -i eth0 -nh -o /var/www/html/overview.png
 EOF
 
-chmod +x /etc/cron.hourly/generate_stats.sh
+chmod +x /etc/cron.hourly/generate_stats
 
-/etc/cron.hourly/generate_stats.sh
+/etc/cron.hourly/generate_stats
     
 service nginx restart
 
