@@ -1,0 +1,12 @@
+# Default server configuration
+#
+server {
+	listen 1337 default_server;
+	listen [::]:1337 default_server;
+
+	root /var/www/html;
+
+	index index.html;
+
+	server_name _;
+}
