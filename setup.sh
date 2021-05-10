@@ -38,7 +38,7 @@ apt update && apt install nginx
 rm -rf /etc/nginx/conf.d/default.conf
 
 wget https://raw.githubusercontent.com/zerologs/tor-config/main/nginx.conf -O /etc/nginx/nginx.conf
-wget https://raw.githubusercontent.com/zerologs/tor-config/main/default -O /etc/nginx/sites-available/default
+wget https://raw.githubusercontent.com/zerologs/tor-config/main/default -O /etc/nginx/conf.d/default
 wget https://raw.githubusercontent.com/zerologs/tor-config/main/index-stats.html -O /var/www/html/index.html
 
 cat << EOF > /etc/cron.hourly/generate_stats.sh
