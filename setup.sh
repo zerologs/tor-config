@@ -35,6 +35,8 @@ mv /tmp/nginx_signing.key /etc/apt/trusted.gpg.d/nginx_signing.asc
 
 apt update && apt install nginx
 
+mkdir -p /var/www/html && chown -Rv nginx:nginx /var/www/html
+
 rm -rf /etc/nginx/conf.d/default.conf
 
 wget https://raw.githubusercontent.com/zerologs/tor-config/main/nginx.conf -O /etc/nginx/nginx.conf
