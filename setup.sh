@@ -33,7 +33,7 @@ gpg --dry-run --quiet --import --import-options import-show /tmp/nginx_signing.k
 
 mv /tmp/nginx_signing.key /etc/apt/trusted.gpg.d/nginx_signing.asc
 
-apt get update && apt install nginx
+apt update && apt install nginx
 
 rm -rf /etc/nginx/conf.d/default.conf
 
