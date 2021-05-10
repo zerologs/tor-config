@@ -2,7 +2,7 @@
 
 apt update && apt upgrade
 
-apt-get install pdns-recursor wget unattended-upgrades vnstat vnstati apt-transport-https curl gnupg2 ca-certificates lsb-release
+apt-get install pdns-recursor wget unattended-upgrades vnstat vnstati apt-transport-https curl gnupg2 ca-certificates lsb-release htop
 
 # Install Tor
 
