@@ -154,7 +154,7 @@ DirPortFrontPage /etc/tor/tor-exit-notice.html
 ## https://www.torproject.org/docs/faq#MultipleRelays
 ## However, you should never include a bridge's fingerprint here, as it would
 ## break its concealability and potentionally reveal its IP/TCP address.
-MyFamily E75CC2359213B34510AEC3203BA7860DA666F0E3,05F0BC3917D65670062C9B2D868C134F60C01648
+MyFamily E75CC2359213B34510AEC3203BA7860DA666F0E3,05F0BC3917D65670062C9B2D868C134F60C01648,856FFF1A581DA7B4DB81F2BF21EF2C82B2C97841
 
 ## A comma-separated list of exit policies. They're considered first
 ## to last, and the first match wins. If you want to _replace_
