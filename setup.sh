@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ -z "$1" ]
+  then
+    echo "usage: $0 middle or $0 exit"
+fi
+
 apt update && apt upgrade
 
 apt-get install pdns-recursor wget unattended-upgrades vnstat vnstati apt-transport-https curl gnupg2 ca-certificates lsb-release htop
@@ -15,7 +20,7 @@ gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | apt-key add -
 apt update
 apt install deb.torproject.org-keyring tor nyx
 
-wget https://raw.githubusercontent.com/zerologs/tor-config/main/torrc.template -O /etc/tor/torrc
+wget "https://raw.githubusercontent.com/zerologs/tor-config/main/torrc-$1.template" -O /etc/tor/torrc
 wget https://raw.githubusercontent.com/zerologs/tor-config/main/recursor.conf -O /etc/powerdns/recursor.conf
 wget https://raw.githubusercontent.com/zerologs/tor-config/main/tor-exit-notice.html -O /etc/tor/tor-exit-notice.html
 
