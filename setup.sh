@@ -56,4 +56,7 @@ service nginx restart
 
 echo 'nameserver 127.0.0.1' > /etc/resolv.conf
 
+wget https://raw.githubusercontent.com/zerologs/tor-config/main/sshd_config -O /etc/ssh/sshd_config
+wget https://raw.githubusercontent.com/zerologs/tor-config/main/issue.net -O /etc/issue.net
+
 systemctl disable rsyslog.service
